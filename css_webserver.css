@@ -1,0 +1,211 @@
+.grid-container {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-gap: 20px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Arial;
+            display: inline-block;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 3.0rem;
+        }
+
+        .units {
+            font-size: 1.2rem;
+        }
+
+        .dht-labels {
+            font-size: 1.5rem;
+            vertical-align: middle;
+            padding-bottom: 15px;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 60%;
+            padding: 10px;
+        }
+
+        .column-2 {
+            float: left;
+            width: 40%;
+            padding: 10px;
+        }
+
+
+        .row_1 {
+            display: flex;
+        }
+
+        /* Clear floats after the columns */
+        .row-child:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        .left-column {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            /* Thêm hàng mới */
+            padding: 20px;
+            margin-top: 18px;
+            background: #f3f1f1cc;
+        }
+
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 100%;
+                /* Khi màn hình nhỏ hơn hoặc bằng 768px, chuyển sang một cột duy nhất */
+            }
+        }
+
+        .limit {
+            margin-top: 5px;
+            width: 100%;
+            border: 1px solid black;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
+            outline: none;
+            opacity: 0.8;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            border-radius: 10px;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #04AA6D;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #04AA6D;
+            cursor: pointer;
+        }
+
+        .led-notice {
+            display: flex;
+            /* Sử dụng Flexbox */
+        }
+
+        .circle_led {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        #led_green {
+            position: relative;
+            margin: 16px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgb(61, 204, 61);
+            background: green;
+        }
+
+        #led_yellow {
+            position: relative;
+            margin: 16px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgb(230, 255, 3);
+            background: yellow;
+        }
+
+        #led_red {
+            position: relative;
+            margin: 16px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgb(248, 80, 80);
+            background: red;
+        }
+
+        /* CSS button */
+        .toggle-button-demo {
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .toggle-ios {
+            display: none;
+        }
+
+        .toggle-ios+.toggle-btn {
+            outline: 0;
+            display: block;
+            width: 4em;
+            margin: 0 auto;
+            height: 2em;
+            position: relative;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: #fbfbfb;
+            border-radius: 2em;
+            padding: 2px;
+            -webkit-transition: all .4s ease;
+            transition: all .4s ease;
+            border: 1px solid #e8eae9;
+        }
+
+        .toggle-ios+.toggle-btn:after {
+            position: relative;
+            display: block;
+            content: "";
+            width: 50%;
+            height: 100%;
+            left: 0;
+            border-radius: 2em;
+            background: #fbfbfb;
+            -webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+            transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        .toggle-ios:checked+.toggle-btn {
+            background: #86d993;
+        }
+
+        .toggle-ios:checked+.toggle-btn:after {
+            left: 50%;
+        }
